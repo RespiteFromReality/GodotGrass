@@ -1,10 +1,10 @@
 @tool
 extends Node3D
 
-const GRASS_MESH_HIGH := preload('res://assets/grass/grass_high.obj')
-const GRASS_MESH_LOW := preload('res://assets/grass/grass_low.obj')
-const GRASS_MAT := preload('res://assets/grass/mat_grass.tres')
-const HEIGHTMAP := preload('res://assets/heightmap.tres')
+const GRASS_MESH_HIGH := preload("uid://cjjcs3i3mtfp0")
+const GRASS_MESH_LOW := preload("uid://d2o2w4alobn3i")
+const GRASS_MAT := preload("uid://y6fsll8cbpbu")
+const HEIGHTMAP := preload("uid://cu778cjhw0raj")
 
 const TILE_SIZE := 5.0
 const MAP_RADIUS := 200.0
