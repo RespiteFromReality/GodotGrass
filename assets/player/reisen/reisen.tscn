@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c4j34g85ou7xk"]
 
 [ext_resource type="PackedScene" uid="uid://cguqdcgualws5" path="res://assets/player/reisen/resources/reisen.glb" id="1_u1p05"]
-[ext_resource type="Script" path="res://addons/jigglebones/jigglebone.gd" id="2_i64ss"]
+[ext_resource type="Script" uid="uid://d1rajowcf0kr4" path="res://addons/jigglebones/jigglebone.gd" id="2_i64ss"]
 [ext_resource type="PackedScene" uid="uid://cwq03hp7jphg1" path="res://assets/player/reisen/skirt_controller.tscn" id="3_a04qq"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_35vo3"]
@@ -289,7 +289,7 @@ use_gravity = true
 forward_axis = 3
 
 [node name="BoneAttachmentSpine_0" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="24"]
-transform = Transform3D(1, 3.92218e-15, -1.50996e-07, 6.53771e-14, 1, 4.58948e-07, 1.50996e-07, -4.58948e-07, 1, 1.65977e-15, 7.98238, -3.44625e-06)
+transform = Transform3D(1, 3.922386e-15, -1.5099576e-07, 6.53771e-14, 1, 4.5894996e-07, 1.5099576e-07, -4.5894996e-07, 1, 1.6597612e-15, 7.98238, -3.4462478e-06)
 bone_name = "spine0"
 bone_idx = 1
 
@@ -299,7 +299,7 @@ shape = SubResource("SphereShape3D_35vo3")
 disabled = true
 
 [node name="BoneAttachmentChest" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="25"]
-transform = Transform3D(1, 8.52651e-14, 2.65847e-06, -2.68854e-07, 0.994873, 0.101131, -2.64484e-06, -0.101131, 0.994873, -7.42035e-14, 9.36192, -0.118936)
+transform = Transform3D(1, 6.039613e-14, 2.658473e-06, -2.6885348e-07, 0.994873, 0.10113074, -2.6448438e-06, -0.101130724, 0.99487305, -7.147878e-14, 9.361923, -0.11893557)
 bone_name = "chest"
 bone_idx = 17
 
@@ -309,7 +309,7 @@ shape = SubResource("SphereShape3D_glkc8")
 disabled = true
 
 [node name="BoneAttachmentThighR" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="26"]
-transform = Transform3D(0.999887, 0.00867411, -0.0122663, 0.00902125, -0.999552, 0.0285473, -0.0120133, -0.0286548, -0.999517, -0.695, 6.86764, -4.09538e-06)
+transform = Transform3D(0.99988735, 0.008673266, -0.012264848, 0.009020343, -0.99955183, 0.028547883, -0.012011915, -0.02865541, -0.9995173, -0.6950001, 6.8676453, -5.118097e-06)
 bone_name = "thigh_R"
 bone_idx = 68
 
@@ -322,7 +322,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 1.75, 0.5)
 shape = SubResource("CapsuleShape3D_gx14t")
 
 [node name="BoneAttachmentThighL" type="BoneAttachment3D" parent="Armature/Skeleton3D" index="27"]
-transform = Transform3D(0.999887, -0.00867333, 0.0122664, -0.00902081, -0.999551, 0.0285644, 0.0120134, -0.028672, -0.999517, 0.695, 6.86764, -3.88897e-06)
+transform = Transform3D(0.99988735, -0.008673549, 0.012265116, -0.00902091, -0.9995514, 0.028564245, 0.012012094, -0.02867192, -0.99951684, 0.69499975, 6.867646, -4.7655767e-06)
 bone_name = "thigh_L"
 bone_idx = 3
 

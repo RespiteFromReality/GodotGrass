@@ -6,5 +6,5 @@ offset = Vector3(-2, 0, 0)
 fractal_gain = 0.1
 
 [resource]
-seamless = true
 noise = SubResource("FastNoiseLite_urkrv")
+seamless = true

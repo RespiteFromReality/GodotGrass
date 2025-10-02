@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cwq03hp7jphg1"]
 
-[ext_resource type="Script" path="res://assets/player/reisen/skirt_controller.gd" id="1_1x8eb"]
+[ext_resource type="Script" uid="uid://dhy3fakperj0g" path="res://assets/player/reisen/skirt_controller.gd" id="1_1x8eb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_52y5v"]
 render_priority = 1
