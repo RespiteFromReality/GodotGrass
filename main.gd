@@ -23,8 +23,17 @@ var should_render_imgui := true
 @onready var wind_speed := [GRASS_MAT.get_shader_parameter('wind_speed')]
 
 func _init() -> void:
-	DisplayServer.window_set_size(DisplayServer.screen_get_size() * 0.75)
-	DisplayServer.window_set_position(DisplayServer.screen_get_size() * 0.25 / 2.0)
+	if DisplayServer.window_get_vsync_mode() == DisplayServer.VSYNC_ENABLED:
+		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	
+	var monitor_size : Vector2 = DisplayServer.screen_get_size()
+	var monitor_origin : Vector2 = DisplayServer.screen_get_position()
+	var window_size : Vector2 = monitor_size * 0.75
+	var centered_offset : Vector2 = (monitor_size - window_size) / 2
+	var window_position : Vector2 = monitor_origin + centered_offset
+	DisplayServer.window_set_position(window_position)
+	DisplayServer.window_set_size(window_size)
+	
 	RenderingServer.global_shader_parameter_set('heightmap', HEIGHTMAP)
 	RenderingServer.global_shader_parameter_set('heightmap_scale', HEIGHTMAP_SCALE)
 	
