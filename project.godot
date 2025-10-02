@@ -11,10 +11,15 @@ config_version=5
 [application]
 
 config/name="Grass"
+config/description="A grass rendering experiment in the Godot Engine inspired by techniques used in \"Ghost of Tsushima\". Individual blades of grass are generated with GPU instancing via Godot's MultiMeshInstance node and are colored/animated using a shader-driven approach.
+
+Author: Ethan Truong (2Retr0)
+Repo: https://github.com/2Retr0/GodotGrass"
+config/tags=PackedStringArray("gpu", "grass", "rendering")
 run/main_scene="uid://bdwfqkcaanmpm"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/show_image=false
-config/icon="uid://b4hltcj1c1qnj"
+config/icon="uid://c1ehjcw1obiql"
 
 [autoload]
 
