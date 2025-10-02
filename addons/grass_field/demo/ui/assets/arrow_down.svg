@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 20 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-347.021,-98.9728)">
+        <g id="Dropdown">
+            <g transform="matrix(1.00252,0,0,0.997487,-0.922071,0.248675)">
+                <rect x="347.069" y="98.973" width="18.993" height="19.041" style="fill:rgb(41,72,110);fill-opacity:0;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,0.0478424,0.0239212)">
+                <path d="M350.944,103.948L356.542,112.943L362.044,103.948L350.944,103.948Z" style="fill:white;"/>
+            </g>
+        </g>
+    </g>
+</svg>

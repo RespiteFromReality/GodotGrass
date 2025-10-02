@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 19 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:1.5;">
+    <g transform="matrix(1,0,0,1,-158.111,-76.1385)">
+        <g id="Checkbox">
+            <g transform="matrix(1,0,0,1,-0.224261,-0.0747538)">
+                <rect x="158.335" y="76.213" width="18.763" height="18.688" style="fill:rgb(33,49,74);"/>
+            </g>
+            <path d="M161.557,85.501L165.575,89.405L173.46,81.521" style="fill:none;stroke:rgb(66,150,250);stroke-width:2.14px;"/>
+        </g>
+        <g id="Checkbox1" serif:id="Checkbox">
+        </g>
+    </g>
+</svg>

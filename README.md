@@ -1,4 +1,9 @@
-# GodotGrass
+# Fork Changes
+- Upgraded project to generate uid and replaced res:// references with uid:// where applicable.
+- Added desc, tags, icons to project.
+- Replaced imgui with custom Godot UI with a imgui look.
+
+# Godot Grass
 
 A grass rendering experiment in the Godot Engine inspired by techniques used in "Ghost of Tsushima". Individual blades of grass are generated with GPU instancing via Godot's MultiMeshInstance node and are colored/animated using a shader-driven approach.
 

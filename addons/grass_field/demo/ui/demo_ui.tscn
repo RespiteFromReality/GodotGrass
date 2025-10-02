@@ -1,0 +1,304 @@
+[gd_scene load_steps=13 format=3 uid="uid://bgl3wbdn7fh1a"]
+
+[ext_resource type="Theme" uid="uid://v3n2gr74swry" path="res://addons/grass_field/demo/ui/imgui_theme.tres" id="1_n24ev"]
+[ext_resource type="Script" uid="uid://dj3qlu7uupdmi" path="res://addons/grass_field/demo/ui/demo_ui.gd" id="2_y2s51"]
+[ext_resource type="Texture2D" uid="uid://cv1b46j1hm1jf" path="res://addons/grass_field/demo/ui/assets/arrow_down.svg" id="3_rdy48"]
+[ext_resource type="Script" uid="uid://bm5qhniukkvy" path="res://addons/grass_field/demo/ui/ui_toggle.gd" id="4_hfod4"]
+[ext_resource type="Script" uid="uid://bva614db24pi7" path="res://addons/grass_field/demo/ui/update_text.gd" id="5_xiv1x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osnnh"]
+bg_color = Color(0.16078432, 0.2901961, 0.47843137, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0hjcv"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4toh0"]
+load_path = "res://.godot/imported/arrow_right.svg-244280328e70fe523de3640e60db6b77.ctex"
+
+[sub_resource type="ImageTexture" id="ImageTexture_lmbus"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_i62bo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8dvmo"]
+bg_color = Color(0.18895924, 0.19329238, 0.21495155, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfdj0"]
+bg_color = Color(0.18895924, 0.19329238, 0.21495155, 1)
+
+[node name="DemoUI" type="Control"]
+layout_mode = 3
+anchor_left = 0.0069444445
+anchor_top = 0.012345679
+anchor_right = 0.3029514
+anchor_bottom = 0.4814815
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n24ev")
+script = ExtResource("2_y2s51")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.006
+anchor_right = 1.0
+offset_left = 1.9860005
+offset_right = 2.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_osnnh")
+
+[node name="UIToggle" type="CheckBox" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.059000004
+anchor_top = 0.019000001
+anchor_right = 0.059000004
+anchor_bottom = 0.019000001
+offset_left = -14.119001
+offset_top = -7.7990017
+offset_right = 5.8809986
+offset_bottom = 20.200998
+theme_override_styles/normal = SubResource("StyleBoxEmpty_0hjcv")
+theme_override_icons/checked = ExtResource("3_rdy48")
+theme_override_icons/unchecked = SubResource("CompressedTexture2D_4toh0")
+theme_override_icons/radio_unchecked = SubResource("ImageTexture_lmbus")
+theme_override_icons/unchecked_disabled = SubResource("ImageTexture_i62bo")
+button_pressed = true
+script = ExtResource("4_hfod4")
+
+[node name="Grass" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -2.0
+offset_top = 23.0
+offset_right = 343.0
+offset_bottom = 272.0
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Grass"]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Grass/VBoxContainer"]
+layout_mode = 2
+
+[node name="CameraSeparatorPrefix" type="Panel" parent="Grass/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_8dvmo")
+
+[node name="OceanWavesLabel" type="Label" parent="Grass/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Camera"
+
+[node name="CameraSeparatorSuffix" type="Panel" parent="Grass/VBoxContainer/HBoxContainer2"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_8dvmo")
+
+[node name="CameraContainer" type="GridContainer" parent="Grass/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+columns = 2
+
+[node name="FPSLabel" type="Label" parent="Grass/VBoxContainer/CameraContainer"]
+layout_mode = 2
+text = "FPS:"
+
+[node name="FPS" type="Label" parent="Grass/VBoxContainer/CameraContainer"]
+layout_mode = 2
+text = "?"
+
+[node name="CameraFOVLabel" type="Label" parent="Grass/VBoxContainer/CameraContainer"]
+custom_minimum_size = Vector2(145.04, 0)
+layout_mode = 2
+text = "Camera FOV:"
+vertical_alignment = 1
+
+[node name="CameraFOV" type="HSlider" parent="Grass/VBoxContainer/CameraContainer"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+min_value = 40.0
+max_value = 140.0
+value = 75.0
+script = ExtResource("5_xiv1x")
+
+[node name="Label" type="Label" parent="Grass/VBoxContainer/CameraContainer/CameraFOV"]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.79200006
+offset_top = 1.0
+offset_right = 180.0
+offset_bottom = 1.9519987
+text = "0.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CameraPositionLabel" type="Label" parent="Grass/VBoxContainer/CameraContainer"]
+layout_mode = 2
+text = "Camera Position:"
+
+[node name="CameraPosition" type="Label" parent="Grass/VBoxContainer/CameraContainer"]
+layout_mode = 2
+text = "?"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Grass/VBoxContainer"]
+layout_mode = 2
+
+[node name="OceanWavesSeparatorPrefix" type="Panel" parent="Grass/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_lfdj0")
+
+[node name="OceanWavesLabel" type="Label" parent="Grass/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Grass"
+
+[node name="OceanWavesSeparatorSuffix" type="Panel" parent="Grass/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_lfdj0")
+
+[node name="GridContainer2" type="GridContainer" parent="Grass/VBoxContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="RenderFogLabel" type="Label" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Render Fog:"
+
+[node name="RenderFog" type="CheckBox" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+button_pressed = true
+
+[node name="RenderShadowsLabel" type="Label" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Render Shadows:"
+
+[node name="RenderShadows" type="CheckBox" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+button_pressed = true
+
+[node name="GrassDensityLabel" type="Label" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Grass Density:"
+
+[node name="GrassDensity" type="HSlider" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 1.0
+ticks_position = 3
+script = ExtResource("5_xiv1x")
+
+[node name="Label" type="Label" parent="Grass/VBoxContainer/GridContainer2/GrassDensity"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 202.0
+offset_bottom = 17.0
+text = "0.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClumpingFactorLabel" type="Label" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Clumping Factor:"
+
+[node name="ClumpingFactor" type="HSlider" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.01
+value = 1.0
+ticks_position = 3
+script = ExtResource("5_xiv1x")
+
+[node name="Label" type="Label" parent="Grass/VBoxContainer/GridContainer2/ClumpingFactor"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 202.0
+offset_bottom = 17.0
+text = "0.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindSpeedLabel" type="Label" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+text = "Wind Speed:"
+
+[node name="WindSpeed" type="HSlider" parent="Grass/VBoxContainer/GridContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 5.0
+step = 0.01
+value = 1.0
+ticks_position = 3
+script = ExtResource("5_xiv1x")
+
+[node name="Label" type="Label" parent="Grass/VBoxContainer/GridContainer2/WindSpeed"]
+layout_mode = 0
+offset_top = 1.0
+offset_right = 202.0
+offset_bottom = 17.0
+text = "0.00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Separator" type="Panel" parent="Grass/VBoxContainer"]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_lfdj0")
+
+[node name="Label" type="Label" parent="Grass/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+text = "Press Ctrl-F to toggle fullscreen!"
+
+[node name="Label2" type="Label" parent="Grass/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.45490196, 0.45490196, 0.45490196, 1)
+text = "Press Ctrl-H to toggle UI!"
+
+[connection signal="toggled" from="UIToggle" to="UIToggle" method="_on_toggled"]
+[connection signal="value_changed" from="Grass/VBoxContainer/CameraContainer/CameraFOV" to="." method="_on_camera_fov_value_changed"]
+[connection signal="value_changed" from="Grass/VBoxContainer/CameraContainer/CameraFOV" to="Grass/VBoxContainer/CameraContainer/CameraFOV" method="_on_value_changed"]
+[connection signal="toggled" from="Grass/VBoxContainer/GridContainer2/RenderFog" to="." method="_on_render_fog_toggled"]
+[connection signal="toggled" from="Grass/VBoxContainer/GridContainer2/RenderShadows" to="." method="_on_render_shadows_toggled"]
+[connection signal="value_changed" from="Grass/VBoxContainer/GridContainer2/GrassDensity" to="." method="_on_grass_density_value_changed"]
+[connection signal="value_changed" from="Grass/VBoxContainer/GridContainer2/GrassDensity" to="Grass/VBoxContainer/GridContainer2/GrassDensity" method="_on_value_changed"]
+[connection signal="value_changed" from="Grass/VBoxContainer/GridContainer2/ClumpingFactor" to="." method="_on_clumping_factor_value_changed"]
+[connection signal="value_changed" from="Grass/VBoxContainer/GridContainer2/ClumpingFactor" to="Grass/VBoxContainer/GridContainer2/ClumpingFactor" method="_on_value_changed"]
+[connection signal="value_changed" from="Grass/VBoxContainer/GridContainer2/WindSpeed" to="." method="_on_wind_speed_value_changed"]
+[connection signal="value_changed" from="Grass/VBoxContainer/GridContainer2/WindSpeed" to="Grass/VBoxContainer/GridContainer2/WindSpeed" method="_on_value_changed"]
