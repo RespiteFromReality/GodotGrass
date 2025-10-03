@@ -69,7 +69,7 @@ enable_camera_movement = false
 script = ExtResource("1_ejub7")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Grass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.011864662, -0.013253212, 0.022141933)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.017953515, -0.028273106, 0.039622784)
 cast_shadow = 0
 mesh = SubResource("PlaneMesh_aenh8")
 skeleton = NodePath("../..")

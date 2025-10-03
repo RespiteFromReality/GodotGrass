@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=3 uid="uid://bgl3wbdn7fh1a"]
 
-[ext_resource type="Theme" uid="uid://v3n2gr74swry" path="res://addons/grass_field/demo/ui/imgui_theme.tres" id="1_n24ev"]
-[ext_resource type="Script" uid="uid://dj3qlu7uupdmi" path="res://addons/grass_field/demo/ui/demo_ui.gd" id="2_y2s51"]
-[ext_resource type="Texture2D" uid="uid://cv1b46j1hm1jf" path="res://addons/grass_field/demo/ui/assets/arrow_down.svg" id="3_rdy48"]
-[ext_resource type="Script" uid="uid://bm5qhniukkvy" path="res://addons/grass_field/demo/ui/ui_toggle.gd" id="4_hfod4"]
-[ext_resource type="Script" uid="uid://bva614db24pi7" path="res://addons/grass_field/demo/ui/update_text.gd" id="5_xiv1x"]
+[ext_resource type="Theme" uid="uid://y0y6enbffdtx" path="res://addons/grass_field/demo/ui/imgui_theme.tres" id="1_n24ev"]
+[ext_resource type="Script" uid="uid://bs4cuusbg84af" path="res://addons/grass_field/demo/ui/demo_ui.gd" id="2_y2s51"]
+[ext_resource type="Texture2D" uid="uid://8agclyxfujhf" path="res://addons/grass_field/demo/ui/assets/arrow_down.svg" id="3_rdy48"]
+[ext_resource type="Script" uid="uid://whmfbjwr7x6a" path="res://addons/grass_field/demo/ui/ui_toggle.gd" id="4_hfod4"]
+[ext_resource type="Script" uid="uid://cevu581i7odh5" path="res://addons/grass_field/demo/ui/update_text.gd" id="5_xiv1x"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_osnnh"]
 bg_color = Color(0.16078432, 0.2901961, 0.47843137, 1)
